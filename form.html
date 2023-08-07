@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title> Form</title>
+    </head>
+    <body>
+        <form action="res.html" method="GET">
+            <fieldset>
+                <legend>User Information</legend>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" placeholder="Enter your name" required/>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Enter your email" required/>
+                </div>
+                <div>
+                    <label for="num">Number:</label>
+                    <input type="text" name="num" placeholder="Enter your number" pattern="[789][0-9]{9}"/>
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" min="1" max="100" name="age">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" placeholder="Enter your password" required/>
+                </div>
+                <div>
+                    Enter your choose:
+                    <input type="radio" name="tech" value="frontend"> Frontend
+                    <input type="radio" name="tech" value="backend"> Backend
+                </div>
+                <div>
+                    Enter your choose:
+                    <input type="checkbox" name="lang" value="html"> HTML
+                    <input type="checkbox" name="lang" value="css"> CSS
+                    <input type="checkbox" name="lang" value="js"> JavaScript
+                    <input type="checkbox" name="lang" value="angular"> Angular
+                </div>
+                <div>
+                    <input type="text" value="read_only"> Content can't be changed 
+                </div>
+                <div>
+                    Select bike:
+                    <select name="Bikes">
+                        <option value="none"></option>
+                        <option value="HeroHonda">HeroHonda</option>
+                        <option value="Splender">Splender</option>
+                        <option value="Ninja" disabled>Ninja</option>
+                        <option value="Pulsav">Pulsav</option>
+                    </select>
+                </div>
+                <span>
+                    Select images:
+                    <input type="file" name="img" accept="image/png, image/jpeg"/>
+                </span>
+                <span>
+                    Select file:
+                    <input type="file" name="file" multiple/>
+                </span>
+                <div>
+                    Date:<input type="datetime-local" name="time-to-pick"/>
+                </div>
+                <span>
+                    Date: <input type="date" name="date">
+                </span>
+                <span>
+                    Month: <input type="month" name="month">
+                </span>
+                <span>
+                    Week: <input type="week" name="week">
+                </span>
+                <div>
+                    Color:<input type="color" name="car-color"/>
+                </div>
+                <div>
+                    Range: <input type="range" name="range" min="0" max="100" value="30"/>
+                </div>
+                <div>
+                    Enter your git url: 
+                    <input type="url" name="url" pattern="https://github.com.*" />
+                </div>
+                <span>
+                    <input type="reset"/> 
+                </span>
+                <span>
+                    <input type="submit"/> 
+                </span>
+            </fieldset>
+        </form>
+    </body>
+</html>
