@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title> Form</title>
+        <style>
+            form{
+                font-size: large;
+                font-weight: 600;
+                
+            }
+            span{
+                padding-inline-end: 50px;
+                padding-bottom: 30px;
+            }
+            div{
+                padding-bottom: 30px;
+            }
+            button{
+                background-color: rgb(45, 163, 236);
+                color: white;
+                font-weight: 800; 
+            }
+            input:autofill {
+                border: 3px solid darkorange;
+            }
+
+                input:-webkit-autofill {
+                border: 3px solid darkorange;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form action="res.html" method="GET">
+            <fieldset>
+                <legend>User Information</legend>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required autocomplete="on"/>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required autocomplete="on"/>
+                </div>
+                <div>
+                    <label for="num">Number:</label>
+                    <input type="text" name="num" id="num" placeholder="Enter your number" pattern="[789][0-9]{9}" required autocomplete="on"/>
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" id="age" min="1" max="100" required autocomplete="on">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required/>
+                </div>
+                <div>
+                    Enter your choose:
+                    <input type="radio" name="tech" value="frontend"> Frontend
+                    <input type="radio" name="tech" value="backend"> Backend
+                </div>
+                <div>
+                    Enter your choose:
+                    <input type="checkbox" name="lang" value="html"> HTML
+                    <input type="checkbox" name="lang" value="css"> CSS
+                    <input type="checkbox" name="lang" value="js"> JavaScript
+                    <input type="checkbox" name="lang" value="angular"> Angular
+                </div>
+                <div>
+                    <input type="text" name="read" value="read_only"> Content can't be changed 
+                </div>
+                <div>
+                    Select bike:
+                    <select name="Bikes">
+                        <option value="none"></option>
+                        <option value="HeroHonda">HeroHonda</option>
+                        <option value="Splender">Splender</option>
+                        <option value="Ninja" disabled>Ninja</option>
+                        <option value="Pulsav">Pulsav</option>
+                    </select>
+                </div>
+                <span>
+                    Select images:
+                    <input type="file" name="img" accept="image/png, image/jpeg"/>
+                </span>
+                <span>
+                    Select file:
+                    <input type="file" name="file" multiple/>
+                </span>
+                <div style="padding-top: 30px;">
+                    Date:<input type="datetime-local" name="time-to-pick"/>
+                </div>
+                <span>
+                    Date: <input type="date" name="date">
+                </span>
+                <span>
+                    Month: <input type="month" name="month">
+                </span>
+                <span>
+                    Week: <input type="week" name="week">
+                </span>
+                <div style="padding-top: 30px;">
+                    Color: <input type="color" name="car-color"/>
+                </div>
+                <div>
+                    Range: <input type="range" name="range" min="0" max="100" value="30"/>
+                </div>
+                <div>
+                    Enter your git url: 
+                    <input type="url" name="url" pattern="https://github.com.*" />
+                </div>
+                <span>
+                    <button type="reset">Reset</button> 
+                </span>
+                <span>
+                    <button type="submit">Submit</button> 
+                </span>
+            </fieldset>
+        </form>
+    </body>
+</html>
